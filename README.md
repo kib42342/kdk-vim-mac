@@ -5,15 +5,15 @@ vundle manage &amp; vim for macos
 
 1.將kdk-vim-mac做link
 
-ln -s kdk-vim-mac .vim
+ 	ln -s kdk-vim-mac .vim
 
-ln -s kdk-vim-mac/vimrc-kdk-mac .vimrc
+ 	ln -s kdk-vim-mac/vimrc-kdk-mac .vimrc
 
 2.安裝初始化軟體
 
-cd kdk-vim-mac
+ 	cd kdk-vim-mac
 
-sh new-viminstall.sh
+ 	sh new-viminstall.sh
 
 檔案說明：
 
