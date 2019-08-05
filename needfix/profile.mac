@@ -1,0 +1,33 @@
+
+# MacPorts Installer addition on 2012-08-10_at_23:54:55: adding an appropriate PATH variable for use with MacPorts.
+export PATH=/Users/kib42342/php/bin:opt/local/bin:/opt/local/sbin:$PATH
+# Finished adapting your PATH environment variable for use with MacPorts.
+
+
+##
+# Your previous /Users/kib42342/.profile file was backed up as /Users/kib42342/.profile.macports-saved_2012-08-13_at_16:00:26
+##
+
+# MacPorts Installer addition on 2012-08-13_at_16:00:26: adding an appropriate PATH variable for use with MacPorts.
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+# Finished adapting your PATH environment variable for use with MacPorts.
+
+export PATH=~/encoder:$PATH
+
+##
+# Your previous /Users/kib42342/.profile file was backed up as /Users/kib42342/.profile.macports-saved_2013-03-01_at_19:24:09
+##
+
+# MacPorts Installer addition on 2013-03-01_at_19:24:09: adding an appropriate PATH variable for use with MacPorts.
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+# Finished adapting your PATH environment variable for use with MacPorts.
+
+
+##
+# Your previous /Users/kib42342/.profile file was backed up as /Users/kib42342/.profile.macports-saved_2013-03-01_at_19:34:13
+##
+
+# MacPorts Installer addition on 2013-03-01_at_19:34:13: adding an appropriate PATH variable for use with MacPorts.
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+# Finished adapting your PATH environment variable for use with MacPorts.
+
