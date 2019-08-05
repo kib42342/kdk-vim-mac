@@ -1,0 +1,7 @@
+# 忽略備份資料夾
+backup/
+# 忽略暫存資料夾
+swap/
+# 忽略bundle資料夾
+bundle/
+
