@@ -5,3 +5,5 @@ swap/
 # 忽略bundle資料夾
 bundle/
 
+# 忽略檔案
+.DS_Store
