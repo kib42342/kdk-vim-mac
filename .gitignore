@@ -1,9 +1,10 @@
 # 忽略備份資料夾
-backup/
+backup/*
 # 忽略暫存資料夾
-swap/
+swap/*
 # 忽略bundle資料夾
-bundle/
+bundle/*
 
 # 忽略檔案
 .DS_Store
+tags

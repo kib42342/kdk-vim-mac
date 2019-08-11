@@ -3,10 +3,11 @@ git clone https://github.com/vundlevim/vundle.vim.git /Users/kdk/.vim/bundle/Vun
 brew install cmake
 brew install make
 brew install phpunit
+vi -c "PluginInstall"
 cd ~/.vim/bundle/YouCompleteMe/
 git submodule update --init --recursive
 cd ~/
-vi -c "PluginInstall"
 ln -sF .vim/stardict .stardict
-
+brew cask install xquartz
+brew install wmctrl
 

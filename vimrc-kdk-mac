@@ -8,10 +8,10 @@ source ~/.vim/vimrc-kdk-modules
 " 讓.vimrc配置變更立即生效
 autocmd BufWritePost $MYVIMRC source $MYVIMRC
 
+
 " 使用模板
 " 新增模版以副檔案為檔名置於templates資料夾中
 au BufNewFile * :silent! exec ":0r ".$HOME."/.vim/templates/".&ft
-
 
 " 開啟文件類型偵測
 filetype on
@@ -43,12 +43,20 @@ set completeopt=longest,menu
 
 " 設定語法高亮
 syntax on
+" 禁止光標閃爍
+"set gcr=a:block-blinkon0
+"" 禁止顯示滾動條
+"set guioptions-=l
+"set guioptions-=L
+"set guioptions-=r
+"set guioptions-=R
+"" 禁止顯示菜單和工具條
+"set guioptions-=m
+"set guioptions-=T
 
 " run phpunit tests
 " :!phpunit %<CR>
 
-
-" 
 set confirm
 "
 set showcmd
@@ -65,10 +73,11 @@ set showcmd
 " Un-indent
 " <<
 set smartindent
+set shiftwidth=4
 
 
 " hit enter to cancel searched highlight 按《ENTER》取消高亮標示
-noremap <CR> :nohlsearch<CR>
+nmap <CR> <ESC>:nohlsearch<CR>
 highlight Search cterm=underline
 " 為當前光標所在之行加入底線加強提示
 set cursorline
@@ -80,8 +89,8 @@ set laststatus=2
 set background=dark
 "set background=light
 "colorscheme nerv-ous
-"colorscheme solarized
-colorscheme molokai
+colorscheme solarized
+"colorscheme molokai
 "colorscheme phd
 
 " <<<折疊代碼>>>
@@ -112,13 +121,14 @@ colorscheme molokai
 "    在括號處 zf% ，建立當前行起到對應的匹配的括號上去（ (),{},[],<>等 ）
 " zd 刪除在光標下的折疊．ONLY FOR "foldmethod" set "manual" OR "marker"
 " zD 循環刪除在光標下的折疊，嵌套刪除折疊．ONLY FOR "foldmethod" set "manual" OR "marker"
-" zE 除去窗口裡"所有"的折疊．ONLY FOR "foldmethod" set "manual" OR "marker"
+" zE 除去窗口裡"所有"的折疊．ONLY FOR "foldmethod" set "manual" OR "marker
 "set foldmethod=manual
-"set foldmethod=indent
-"set foldmethod=expr
+"set foldmethod=indent "set foldmethod=expr
 "set foldmethod=syntax
 "set foldmethod=diff
 set foldmethod=marker
+
+
 
 " Mappings to access buffers (don't use "\p" because a
 " delay before pressing "p" would accidentally paste).
@@ -153,6 +163,15 @@ let g:ycm_auto_trigger = 1
 let g:ycm_collect_identifiers_from_tags_files = 1
 let g:ycm_use_clangd = 0
 
+" Airlinerefresh
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+" let g:airline#extensions#tabline#formatter = 'default'
+" let g:airline#extensions#tabline#formatter = 'jsformatter'
+" let g:airline#extensions#tabline#formatter = 'unique_tail'
+let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+
 " zencode(emmet.vim) 操作方式為"<ctrl+e>+,"
 " https://blog.zfanw.com/zencoding-vim-tutorial-chinese/
 "let g:user_emmet_mode='inv'
@@ -183,51 +202,54 @@ set keywordprg=sdcv\ -u\ 懶蟲簡明英漢詞典
 
 
 " - 定義快捷鍵到行首行尾
-nmap LB 0
-nmap LE $
+nnoremap LB 0
+nnoremap LE $
 " - 定義快捷鍵將所選文字複製到系統剪貼簿
-vnoremap <Leader>y "+y
+vmap <Leader>y "+y
 " - 定義快捷鍵將系統剪貼簿文字複製到VIM
-nmap <Leader>p "+p
+nnoremap <Leader>p "+p
 " - 定義快捷鍵將當前分割窗口關閉 
-nmap <Leader>q :q<CR>
-nmap <Leader><Leader>q :q!<CR>
+nnoremap <Leader>q :q<CR>
+nnoremap <Leader><Leader>q :q!<CR>
 " - 定義快捷鍵將當前分割窗口內容儲存 
-nmap <Leader>w :w<CR>
-nmap <Leader><Leader>w :w!<CR>
+nnoremap <Leader>w :w<CR>
+nnoremap <Leader><Leader>w :w!<CR>
 " - 定義快捷鍵將當前分割窗口內容儲存後關閉 
-nmap <Leader>x :x!<CR>
+nnoremap <Leader>x :x!<CR>
 " - 定義快捷鍵跳轉各子窗口 
 nnoremap nw <C-W><C-W>
 " - 定義快捷鍵跳轉右子窗口 
 nnoremap <Leader>lw <C-W>l
-nmap <C-l> <C-w>l
+nnoremap <C-l> <C-w>l
 " - 定義快捷鍵跳轉左子窗口 
 nnoremap <Leader>hw <C-W>h
-nmap <C-h> <C-w>h
+nnoremap <C-h> <C-w>h
 " - 定義快捷鍵跳轉上子窗口 
 nnoremap <Leader>kw <C-W>k
-nmap <C-k> <C-w>k
+nnoremap <C-k> <C-w>k
 " - 定義快捷鍵跳轉下子窗口 
 nnoremap <Leader>jw <C-W>j
-nmap <C-j> <C-w>j
+nnoremap <C-j> <C-w>j
 " - 定義快捷鍵在結對符({})之間跳轉
-nmap <Leader>m %
+nnoremap <Leader>m %
 
 " - easy escaping to normal mode
-imap jj <esc>
+inoremap jj <esc>
 
 " - Auto change directory to match current file ,cd
-nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
+nnoremap <Leader>cd :cd %:p:h<CR>:pwd<CR>
 
 " - easier window navigation
-nmap sp <C-w>n
-nmap spv <C-w>v
+nnoremap sp <C-w>n
+nnoremap spv <C-w>v
 
-" - Load the current buffer in Chrome (for macos)
-nmap ,c :!open -a Google\ Chrome<cr>
-" - Load the current buffer in firefox(for macos)
-nmap ,f :!open -a firefox<cr>
+"" - Load the current buffer in Chrome (for macos)
+"nnoremap <Leader>c :!open -a Google\ Chrome<cr>
+"" - Load the current buffer in firefox(for macos)
+"nnoremap <Leader>f :!open -a firefox<cr>
+
+" - use py3
+let g:UltiSnipsUsePythonVersion = 3
 
 " - easy motion stuff
 let g:EasyMotion_smartcase = 1
@@ -242,11 +264,32 @@ map <Leader><Leader>. <Plug>(easymotion-repeat)
 map <Leader><Leader>r :AirlineRefresh<CR>
 
 " - 定義快捷鍵自動補齊code
-imap <Tab><Tab> <C-x><C-o>
+inoremap <Tab><Tab> <C-x><C-o>
 " - HIT ,t toggle NERDTRE
 nnoremap <Leader>t :NERDTreeToggle<CR><CR>k
 
+" - 定義成對符號自動補齊code
+inoremap ( ()<Esc>i
+inoremap " ""<Esc>i
+inoremap ' ''<Esc>i
+inoremap [ []<Esc>i
+inoremap {<CR> {<CR>}<Esc>ko
+inoremap {{ {}<ESC>i
+
+" - 定義成對符號自動補齊code
+inoremap php<CR> <?php<CR>?><Esc>ko
+
+" - 輸入模式中跳至行末
+inoremap <Leader>e <Esc>$a
+
 " 常用操作快捷鍵設定 end
 
-
+"" 將外部命令wmctrl控製窗口最大化命令行參數封裝成一個vim的函數
+"fun! ToggleFullscreen()
+"	call system("wmctrl -ir " . v:windowid . " -b toggle,fullscreen")
+"endf
+"" 全屏開/關快捷鍵
+"map <silent> <F11> :call ToggleFullscreen()<CR>
+"" 啟動vim時自動全屏
+"autocmd VimEnter * call ToggleFullscreen()
 

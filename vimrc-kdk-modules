@@ -4,36 +4,64 @@ set rtp+=~/.vim/bundle/Vundle.vim
 " vundle 管理插件列表必須位于vundle#begin()和vundle#end()間
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'tomasr/molokai'
-Plugin 'vim-scripts/phd'
+Plugin 'altercation/vim-colors-solarized' " color schema
+Plugin 'tomasr/molokai' " color schema
+Plugin 'vim-scripts/phd' " color schema
 Plugin 'Lokaltog/vim-powerline'
 Plugin 'octol/vim-cpp-enhanced-highlight'
+Plugin 'majutsushi/tagbar'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'derekwyatt/vim-fswitch'
 Plugin 'kshenoy/vim-signature'
 Plugin 'vim-scripts/BOOKMARKS--Mark-and-Highlight-Full-Lines'
-Plugin 'majutsushi/tagbar'
 Plugin 'vim-scripts/indexer.tar.gz'
 Plugin 'vim-scripts/DfrankUtil'
 Plugin 'vim-scripts/vimprj'
 Plugin 'dyng/ctrlsf.vim'
 Plugin 'terryma/vim-multiple-cursors'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'vim-scripts/DrawIt'
-Plugin 'SirVer/ultisnips'
-Plugin 'Valloric/YouCompleteMe'
+Plugin 'vim-scripts/DrawIt' " 用文字畫表格、流程圖工具
+Plugin 'SirVer/ultisnips' " snippets plugin
+Plugin 'honza/vim-snippets' " snippets plugin
+Plugin 'Valloric/YouCompleteMe' " 程式碼自動完成
 Plugin 'derekwyatt/vim-protodef'
-Plugin 'scrooloose/nerdtree'
 Plugin 'fholgado/minibufexpl.vim'
-Plugin 'gcmt/wildfire.vim'
+"Plugin 'gcmt/wildfire.vim'
 Plugin 'sjl/gundo.vim'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'suan/vim-instant-markdown'
 Plugin 'lilydjwg/fcitx.vim'
 Plugin 'marijnh/tern_for_vim'
-Plugin 'mattn/emmet-vim'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdtree' " 資料夾樹狀導覽
+Plugin 'bfredl/nvim-miniyank' " Essentials plugins
+Plugin 'moll/vim-bbye' " Essentials plugins
+Plugin 'itchyny/lightline.vim' " Essentials plugins
+Plugin 'tpope/vim-commentary' " Essentials plugins
+Plugin 'tpope/vim-abolish' " Essentials plugins
+Plugin 'ludovicchabant/vim-gutentags' " gutentags plugins
+Plugin 'mattn/emmet-vim' " zencode
+Plugin 'joonty/vdebug' " Debugger plugin
+Plugin 'tobyS/vmutache' " PHPDOC plugin
+Plugin 'tobyS/pdv' " PHPDOC plugin
+Plugin 'tpope/vim-fugitive' " GIT plugin
+Plugin 'tpope/vim-signify' " GIT plugin
+Plugin 'adoy/vim-php-refactoring-toolbox' " Refactoring plugin
+Plugin 'jvanja/vim-bootstrap4-snippets' " bootstrap4 snippets https://vimawesome.com/plugin/vim-bootstrap4-snippets
+Plugin 'ncm2/ncm2' " Autocompletion plugin
+Plugin 'phpactor/phpactor' " Refactoring plugin
+Plugin 'phpactor/ncm2-phpactor' " Refactoring plugin
+Plugin 'neomake/neomake' " Code Quality plugin
+Plugin 'junegunn/fzf.vim' " Searching/replacing plugin
+Plugin 'BurntSushi/ripgrep' " Searching/replacing plugin
+Plugin 'wincent/ferret' " Searching/replacing plugin
+Plugin 'StanAngeloff/php.vim' " syntax plugin
+Plugin 'stephpy/vim-php-cs-fixer' " syntax plugin
+Plugin 'amiorin/vim-project' " project management plugin
+Plugin 'mhinz/vim-startify' " project management plugin
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+
 
 call vundle#end()
 filetype plugin indent on
-
+au BufWritePost *.php silent! !eval '[ -f ".git/hooks/ctags" ] && .git/hooks/ctags' &
