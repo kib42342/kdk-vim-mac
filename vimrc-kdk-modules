@@ -10,6 +10,8 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'tomasr/molokai' 
 " color schema
 Plugin 'vim-scripts/phd' 
+" color schema
+Plugin 'morhetz/gruvbox'
 
 " themes
 Plugin 'Lokaltog/vim-powerline'
@@ -42,7 +44,7 @@ Plugin 'Valloric/YouCompleteMe'
 
 Plugin 'derekwyatt/vim-protodef'
 Plugin 'fholgado/minibufexpl.vim'
-"Plugin 'gcmt/wildfire.vim'
+Plugin 'gcmt/wildfire.vim'
 Plugin 'sjl/gundo.vim'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'suan/vim-instant-markdown'
