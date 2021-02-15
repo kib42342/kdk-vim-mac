@@ -89,8 +89,8 @@ set laststatus=2
 set background=dark
 "set background=light
 "colorscheme nerv-ous
-colorscheme solarized
-"colorscheme molokai
+"colorscheme solarized
+colorscheme molokai
 "colorscheme phd
 
 " <<<折疊代碼>>>
@@ -202,8 +202,8 @@ set keywordprg=sdcv\ -u\ 懶蟲簡明英漢詞典
 
 
 " - 定義快捷鍵到行首行尾
-nnoremap LB 0
-nnoremap LE $
+nnoremap <Leader>lb 0
+nnoremap <Leader>le $
 " - 定義快捷鍵將所選文字複製到系統剪貼簿
 vmap <Leader>y "+y
 " - 定義快捷鍵將系統剪貼簿文字複製到VIM
