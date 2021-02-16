@@ -96,6 +96,7 @@ Plugin 'phpactor/ncm2-phpactor'
 Plugin 'neomake/neomake' 
 
 " Searching/replacing plugin
+Plugin 'junegunn/fzf' 
 Plugin 'junegunn/fzf.vim' 
 Plugin 'BurntSushi/ripgrep' 
 Plugin 'wincent/ferret' 

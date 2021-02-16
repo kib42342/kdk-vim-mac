@@ -33,6 +33,7 @@ set nu
 set fileencodings=utf-8,ucs-bom,big5,cp950
 set termencoding=utf-8
 set encoding=utf-8
+
 " swap files out of the project root
 set backupdir=~/.vim/backup/
 set directory=~/.vim/swap/
@@ -81,8 +82,6 @@ set smartindent
 set shiftwidth=4
 
 
-" hit enter to cancel searched highlight 按《ENTER》取消高亮標示
-nmap <CR> <ESC>:nohlsearch<CR>
 highlight Search cterm=underline
 " 為當前光標所在之行加入底線加強提示
 set cursorline
@@ -95,10 +94,10 @@ set background=dark
 ""set background=light
 "colorscheme nerv-ous
 "colorscheme solarized
+"colorscheme phd
 "let g:molokai_original = 1
 "let g:rehash256 = 1
 "colorscheme molokai
-"colorscheme phd
 colorscheme gruvbox
 "
 
@@ -260,10 +259,12 @@ nnoremap spv <C-w>v
 "" - Load the current buffer in firefox(for macos)
 "nnoremap <Leader>f :!open -a firefox<cr>
 
+
 " - use py3
 let g:UltiSnipsUsePythonVersion = 3
 
 " - easy motion stuff
+" 指標使用快捷鍵進行快速移動
 let g:EasyMotion_smartcase = 1
 let g:EasyMotion_leader_key = '<Leader>'
 "let g:EasyMotion_startofline = 0 "keep cursor colum when JK motion
@@ -276,8 +277,10 @@ map <Leader><Leader>. <Plug>(easymotion-repeat)
 map <Leader><Leader>r :AirlineRefresh<CR>
 
 " - 定義快捷鍵自動補齊code
-inoremap <Tab><Tab> <C-x><C-o>
+"inoremap <Tab><Tab> <C-x><C-o>
+
 " - HIT ,t toggle NERDTRE
+" 開啟資料夾清單
 nnoremap <Leader>t :NERDTreeToggle<CR><CR>k
 
 " - 定義成對符號自動補齊code
@@ -286,13 +289,20 @@ inoremap " ""<Esc>i
 inoremap ' ''<Esc>i
 inoremap [ []<Esc>i
 inoremap {<CR> {<CR>}<Esc>ko
-inoremap {{ {}<ESC>i
+inoremap { {}<ESC>i
+
+
 
 " - 定義成對符號自動補齊code
 inoremap php<CR> <?php<CR>?><Esc>ko
 
 " - 輸入模式中跳至行末
 inoremap <Leader>e <Esc>$a
+" - 輸入模式中跳至行首
+inoremap <Leader>b <Esc>0i
+
+" hit enter to cancel searched highlight 按《ENTER》取消高亮標示
+nmap <CR> <ESC>:nohlsearch<CR>
 
 " 常用操作快捷鍵設定 end
 
