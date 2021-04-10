@@ -34,6 +34,7 @@ brew install svn
 brew install unzip
 # brew install vim 
 brew install macvim 
+brew install neovim 
 brew install cmake
 brew install zsh
 brew tap caskroom/fonts
@@ -48,4 +49,4 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs history time)# 若當
 POWERLEVEL9K_MODE='nerdfont-complete'
 " >> ~/.zshrc
 
-
+python3 -m pip install --user --upgrade pynvim
