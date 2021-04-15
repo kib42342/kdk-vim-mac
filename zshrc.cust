@@ -1,0 +1,15 @@
+[ -f ~/.vim/fzf.zsh ] && source ~/.vim/fzf.zsh
+[ -f ~/.vim/fzf.conf ] && source ~/.vim/fzf.conf
+# 左側
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir dir_writable vcs) # 右側
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs history time)# 若當前登入的帳號為你的帳號 xxx，就不用特別顯示出來
+# DEFAULT_USER=xxx# 使用 nerd font 時可以顯示更多 icon。詳情請參考 powerlevel9k wiki 
+POWERLEVEL9K_MODE='nerdfont-complete'
+
+export PATH="/usr/local/sbin:$PATH"
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completio
+export PATH="/usr/local/opt/mpv-iina/bin:$PATH"
+export PATH="/usr/local/opt/ffmpeg-iina/bin:$PATH"
+bindkey \^U backward-kill-line 

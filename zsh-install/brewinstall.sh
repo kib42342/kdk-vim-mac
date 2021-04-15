@@ -54,6 +54,6 @@ gsed -i "s/ZSH_THEME=\"robbyrussell\"/ZSH_THEME=\"powerlevel9k\/powerlevel9k\"/"
 
 python3 -m pip install --user --upgrade pynvim
 
-echo bindkey \^U backward-kill-line >>~/.zshrc
+echo source zshrc.cust >>~/.zshrc
 
 
