@@ -40,7 +40,7 @@
 #brew install zsh
 #brew tap caskroom/fonts
 #brew cask install font-sourcecodepro-nerd-font
-brew bundle --file=./brewfiles20210411
+brew bundle --file=./brewfiles20210416  # 20210416
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
@@ -53,3 +53,7 @@ gsed -i "s/ZSH_THEME=\"robbyrussell\"/ZSH_THEME=\"powerlevel9k\/powerlevel9k\"/"
 #" >> ~/.zshrc
 
 python3 -m pip install --user --upgrade pynvim
+
+echo bindkey \^U backward-kill-line >>~/.zshrc
+
+
