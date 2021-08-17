@@ -48,7 +48,7 @@ Plugin 'gcmt/wildfire.vim'
 Plugin 'sjl/gundo.vim'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'suan/vim-instant-markdown'
-Plugin 'lilydjwg/fcitx.vim'
+" Plugin 'lilydjwg/fcitx.vim'
 Plugin 'marijnh/tern_for_vim'
 Plugin 'scrooloose/nerdcommenter'
 " 資料夾樹狀導覽
@@ -76,7 +76,7 @@ Plugin 'tobyS/vmustache'
 Plugin 'tobyS/pdv' 
 
 " GIT plugin
-Plugin 'tpope/vim-fugitive' 
+Plugin 'tpope/vim-fugitive'
 Plugin 'mhinz/vim-signify' 
 
 " Refactoring plugin

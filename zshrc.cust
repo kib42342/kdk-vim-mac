@@ -1,8 +1,8 @@
 [ -f ~/.vim/fzf.zsh ] && source ~/.vim/fzf.zsh
-[ -f ~/.vim/fzf.conf ] && source ~/.vim/fzf.conf
+#[ -f ~/.vim/fzf.conf ] && source ~/.vim/fzf.conf
 # 左側
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir dir_writable vcs) # 右側
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs history time)# 若當前登入的帳號為你的帳號 xxx，就不用特別顯示出來
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs history time) # 若當前登入的帳號為你的帳號 xxx，就不用特別顯示出來
 # DEFAULT_USER=xxx# 使用 nerd font 時可以顯示更多 icon。詳情請參考 powerlevel9k wiki 
 POWERLEVEL9K_MODE='nerdfont-complete'
 
@@ -13,3 +13,25 @@ export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/opt/mpv-iina/bin:$PATH"
 export PATH="/usr/local/opt/ffmpeg-iina/bin:$PATH"
 bindkey \^U backward-kill-line 
+
+#Add the following to your .bashrc or equivalent:
+  export GUILE_LOAD_PATH="/usr/local/share/guile/site/3.0"
+  export GUILE_LOAD_COMPILED_PATH="/usr/local/lib/guile/3.0/site-ccache"
+  export GUILE_SYSTEM_EXTENSIONS_PATH="/usr/local/lib/guile/3.0/extensions"
+#==> icu4c
+#icu4c is keg-only, which means it was not symlinked into /usr/local,
+#because macOS provides libicucore.dylib (but nothing else).
+#
+#If you need to have icu4c first in your PATH, run:
+#  echo 'export PATH="/usr/local/opt/icu4c/bin:$PATH"' >> ~/.zshrc
+#  echo 'export PATH="/usr/local/opt/icu4c/sbin:$PATH"' >> ~/.zshrc
+export PATH="/usr/local/opt/icu4c/bin:$PATH"
+export PATH="/usr/local/opt/icu4c/sbin:$PATH"
+#
+#For compilers to find icu4c you may need to set:
+  export LDFLAGS="-L/usr/local/opt/icu4c/lib"
+  export CPPFLAGS="-I/usr/local/opt/icu4c/include"
+
+#For pkg-config to find icu4c you may need to set:
+  export PKG_CONFIG_PATH="/usr/local/opt/icu4c/lib/pkgconfig"
+
